@@ -1,16 +1,41 @@
-body {
-    background-color: $white;
-    font: 400 14px/18px $font;
-    color: $black;
-    text-align: center;
+@import "_colors";
+@import "_mixin";
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 100vh;
-    height: 100%;
+$font: 'Open Sans', Arial, sans-serif;
+
+.hide {
+  display: none !important;
 }
 
+.btn{
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  background: $yellow;
+  border-radius: 5px;
+  color: $black;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  transition: .2s;
+  font-weight: bold;
+  text-decoration: none;
+  &--center{
+    margin: 0 auto;
+  }
+  &.done{
+    background-color: $violet;
+    color: $white;
+  }
+}
+
+.disabled {
+  pointer-events: none !important;
+}

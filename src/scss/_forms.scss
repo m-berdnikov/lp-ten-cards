@@ -1,0 +1,81 @@
+// @import "_colors";
+
+// .form{
+//   max-width: 420px;
+//   width: 100%;
+//   margin: 20px auto;
+//   text-align: left;
+//   &__input{
+//     width: 100%;
+//     max-width: 421px;
+//     height: 60px;
+//     line-height: 60px;
+//     border-radius: 40px;
+//     font-size: 16px;
+//     box-sizing: border-box;
+//     padding: 0 30px;
+//     background: $white;
+//     border: none;
+//     outline: none;
+//     display: block;
+//     margin-bottom: 10px;
+//     color: $black;
+//     opacity: 1 !important; /* required on iOS */
+//     &::-webkit-input-placeholder { /* Edge */
+//       color: $grey;
+//     }
+//     &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+//       color: $grey;
+//     }
+//     &::placeholder {
+//       color: $grey;;
+//     }
+//   }
+//   &__btn{
+//     width: 100%;
+//     max-width: 421px;
+//     height: 60px;
+//     line-height: 60px;
+//     border-radius: 40px;
+//     display: block;
+//     text-decoration: none;
+//     margin: 15px auto;
+//     cursor: pointer;
+//     border: 0;
+//     color: $black;
+//     background-color: $yellow;
+//     font-weight: bold;
+//   }
+//   &__under{
+//     text-align: center;
+//     color: $white;
+//     margin: 10px auto;
+//     font-size: 10px;
+//     font-weight: normal;
+//     max-width: 250px;
+//     & a{
+//       color: $orange;
+//       text-decoration: none;
+//     }
+//   }
+// }
+
+// //.stripe-button-el{
+// //  width: 100% !important;
+// //  max-width: 421px !important;
+// //  height: 80px !important;
+// //  line-height: 80px !important;
+// //  background: $violet !important;
+// //  border-radius: 40px !important;
+// //  color: $white !important;
+// //  text-decoration: none !important;
+// //  display: block !important;
+// //  font-size: 20px !important;
+// //  font-weight: bold !important;
+// //  text-align: center !important;
+// //  margin: 0 auto !important;
+// //  &>span{
+// //    background: transparent !important;
+// //    font-size: 20px !important;
+// //  }
+// //}

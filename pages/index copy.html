@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Daily-horoscope.us</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="fb:app_id" content="{{ fb.appId }}">
+
+    <include src="_head.html"></include>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="bg">
+            <div class="bg__img"></div>
+        </div>
+        <main class="main">
+
+            {% include "landings/tarot-ten-cards/_header.html.twig" %}
+            <div class="tarot-ten-card">
+
+
+            </div>
+        </main>
+
+        {% include "landings/tarot-ten-cards/_footer.html.twig" %}
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+</body>
+
+</html>

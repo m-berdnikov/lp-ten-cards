@@ -81,3 +81,4 @@ exports.img = compressImg;
 exports.default = parallel(sassFun, compressJS, compressImg, browsersync, startWatch);
 exports.css = series(sassFun, compressCSS);
 exports.build = series(cleanBuild, sassFun, compressCSS, compressJS, compressImg);
+exports.startWatch = startWatch;

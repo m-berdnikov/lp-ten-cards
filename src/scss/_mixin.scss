@@ -1,11 +1,10 @@
-@mixin widthContent($MW, $W, $M) {
-    margin: $M auto;
-    max-width: $MW;
-    width: $W;
+@mixin widthContent($MW, $W, $TB) {
+  margin: $TB auto;
+  max-width: $MW;
+  width: $W;
 }
 
-@mixin fontNormal($S, $L, $W) {
-    font-size: $S;
-    line-height: $L;
-    font-weight: $W;
+@mixin mainWidth() {
+  max-width: 600px;
+  width: 100%;
 }
