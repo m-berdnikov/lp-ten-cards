@@ -1,4 +1,4 @@
-# Simple website template
+# Tarot ten cards page
 Для раскатки локального сервера испльзуется Gulp 4.
 
 После клонирования репозитория выполнить команду npm i.
