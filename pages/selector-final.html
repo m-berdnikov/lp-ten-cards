@@ -14,16 +14,13 @@
     <meta property="og:description" content="">
     <meta property="og:image" content="">
     <meta property="fb:app_id" content="{{ fb.appId }}">
-
     <link rel="stylesheet" type="text/css" href="../build/css/style.css">
     <!-- <link rel="stylesheet" type="text/css" href="../build/css/style.min.css"> -->
-
     <style>
         .bg {
             display: none;
         }
     </style>
-
 </head>
 
 <body>
@@ -40,34 +37,20 @@
             <div class="tarot-ten-card">
                 <div class="tarot-ten-card__selector">
                     <h1 class="tarot-ten-card__selector-title tarot-ten-card__title">Tarot Reading</h1>
-                    <h2 class="tarot-ten-card__selector-desc tarot-ten-card__desc">Your fortune teller’s tarot draw is being
-                        interpreted…</h2>
-                    <div class="tarot-ten-card__selector-list tarot-ten-card__list js-deck" data-type="strengths">
-                        <div class="tarot-ten-card__selector-list-item tarot-ten-card__card js-card" data-type="hermit">
-                        </div>
-                        <div class="tarot-ten-card__selector-list-item tarot-ten-card__card js-card" data-type="death">
-                        </div>
-                        <div class="tarot-ten-card__selector-list-item tarot-ten-card__card js-card"
-                            data-type="handet-man"></div>
-                        <div class="tarot-ten-card__selector-list-item tarot-ten-card__card js-card"
-                            data-type="justice"></div>
-                        <div class="tarot-ten-card__selector-list-item tarot-ten-card__card js-card" data-type="devil">
-                        </div>
-                        <div class="tarot-ten-card__selector-list-item tarot-ten-card__card js-card" data-type="sun">
-                        </div>
-                        <div class="tarot-ten-card__selector-list-item tarot-ten-card__card js-card" data-type="lovers">
-                        </div>
-                        <div class="tarot-ten-card__selector-list-item tarot-ten-card__card js-card"
-                            data-type="whell-of-fortune"></div>
-                        <div class="tarot-ten-card__selector-list-item tarot-ten-card__card js-card"
-                            data-type="temperance"></div>
-                        <div class="tarot-ten-card__selector-list-item tarot-ten-card__card js-card"
-                            data-type="strength"></div>
-                    </div>
+                    <h2 class="tarot-ten-card__selector-desc tarot-ten-card__desc">Your fortune teller’s tarot draw is
+                        being interpreted…</h2>
+                    <p class="tarot-ten-card__selector-desc-final tarot-ten-card__desc">Strengths</p>
+                    <div class="tarot-ten-card__selector-list tarot-ten-card__selector-list--final tarot-ten-card__list js-fnal-tarot-list"
+                        data-type="strengths"></div>
+                    <p class="tarot-ten-card__selector-desc-final tarot-ten-card__desc">Challenges</p>
+                    <div class="tarot-ten-card__selector-list tarot-ten-card__selector-list--final tarot-ten-card__list js-fnal-tarot-list"
+                        data-type="challenges"></div>
+                    <p class="tarot-ten-card__selector-desc-final tarot-ten-card__desc">Subconscious</p>
+                    <div class="tarot-ten-card__selector-list tarot-ten-card__selector-list--final tarot-ten-card__list js-fnal-tarot-list"
+                        data-type="subconscious"></div>
                 </div>
             </div>
         </main>
-
         <footer class="footer js-footer-anchor">
             <div class="footer-wrap">
                 <div class="footer__info">Copyright © 2016-2021 daily-horoscope.us</div>
@@ -78,12 +61,11 @@
     </div>
 
     <script>
-        var type = 'circle';
-        var urlRedirect = 'selector-final.html';
-
+        var type = 'final';
+        var urlRedirect = 'subscription.html';
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script defer src="../build/js/selector.min.js"></script>
+    <script defer src="../src/js/selector.js"></script>
 </body>
 
 </html>

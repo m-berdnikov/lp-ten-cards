@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Daily-horoscope.us</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="fb:app_id" content="{{ fb.appId }}">
+    <link rel="stylesheet" type="text/css" href="../build/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../build/css/style.min.css"> -->
+    <link rel="stylesheet" href="../vendor/just-validate/dist/css/justValidateTooltip.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="bg">
+            <div class="bg__img"></div>
+        </div>
+        <main class="main">
+            <header class="header">
+                <div class="header__wrap">
+                    <div class="header__logo" title="Daily-Horoscope"></div>
+                </div>
+            </header>
+            <div class="tarot-ten-card">
+                <div class="tarot-ten-card__subscription">
+                    <h2 class="tarot-ten-card__subscription-desc tarot-ten-card__desc">Your PERSONAL Tarot prediction is here! Hurry up to get your FREE reading while it’s still available!</h2>
+                    <div class="tarot-ten-card__subscription-text">Click below to get reading</div>
+                    <div class="hide js-hidden-form-wrapper">
+                        <div class="tarot-ten-card__subscription-form">
+                            <form class="form js-form-subscribe" method="POST" action="">
+                                <div class="just-validate-tooltip-container">
+                                    <input class="form__input"
+                                           type="email"
+                                           data-validate-field="email"
+                                           name="email"
+                                           placeholder="Enter email">
+                                </div>
+                                <button class="form__btn" type="submit">Subscribe and get my reading</button>
+                                <div class="form__under">
+                                    This site is protected by reCAPTCHA and the Google
+                                    <a hreflang="en-us" target="_blank" href="https://policies.google.com/privacy">Privacy Policy</a> and
+                                    <a hreflang="en-us" target="_blank" href="https://policies.google.com/terms">Terms of Service</a> apply.
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tarot-ten-card__subscription-text js-hidden-form-under">or</div>
+                    </div>
+
+                    <div class="tarot-ten-card__subscription-btn tarot-ten-card__subscription-btn--email js-btn-show-form">Continue with Email</div>
+
+                    <div id="gSignInWrapper">
+                        <div id="customBtn" class="customGPlusSignIn">
+                            <div class="tarot-ten-card__subscription-btn tarot-ten-card__subscription-btn--google js-subscribe-google disabled">Continue with Google</div>
+                        </div>
+                    </div>
+
+                    <div class="tarot-ten-card__subscription-btn tarot-ten-card__subscription-btn--fb js-subscribe-fb">Continue with Facebook</div>
+
+            </div>
+        </main>
+
+        <footer class="footer js-footer-anchor">
+            <div class="footer-wrap">
+                <div class="footer__info">Copyright © 2016-2021 daily-horoscope.us</div>
+                <a hreflang="en-us" href="#" class="footer__link">Privacy policy</a>
+                <a hreflang="en-us" href="#" class="footer__link">Contact us</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        var type = 'final';
+        var urlRedirect = '';
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <!-- <script defer src="../build/js/selector.min.js"></script> -->
+</body>
+
+</html>

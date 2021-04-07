@@ -51,9 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     } else if (window.type === 'final') {
         window.addEventListener('load', function () {
-            setTimeout(() => {
-                location.href = window.urlRedirect;
-            }, 3000);
+            showFinalDeck();
         });
     } else if (window.type !== 'final') {
         if (window.type !== 'subconscious') {
@@ -61,6 +59,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         fillSelectorDeck();
         hideCard();
+    }
+
+    function showFinalDeck() {
+        let cookiesArray = Cookies.get('tenTarotCards').split('&');
+        let finalTarotList = document.querySelectorAll('.js-fnal-tarot-list');
+        console.log(cookiesArray);
+
+        cookiesArray.forEach((item, index) => {
+            let finalCardItem = document.createElement('div');
+            finalCardItem.setAttribute('class', 'tarot-ten-card__selector-list-item tarot-ten-card__card');
+            finalCardItem.dataset.type = item;
+            finalTarotList.forEach((finalDeckItem) => {
+                if (finalDeckItem.dataset.type === 'strengths' && index < 3) {
+                    finalDeckItem.appendChild(finalCardItem);
+                } else if (finalDeckItem.dataset.type === 'challenges' && index >= 3 && index < 6) {
+                    finalDeckItem.appendChild(finalCardItem);
+                } else if (finalDeckItem.dataset.type === 'subconscious' && index >= 6 && index < 10) {
+                    finalDeckItem.appendChild(finalCardItem);
+                }
+            });
+            setTimeout(() => {
+                location.href = window.urlRedirect;
+            }, 3000);
+        });
     }
 
     function lineAnimation() {
