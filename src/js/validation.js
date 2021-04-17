@@ -1,37 +1,54 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    let hiddenFormWrapper = document.querySelector('.js-hidden-form-wrapper');
-    let btnShowForm = document.querySelector('.js-btn-show-form');
+    let formWrapper = document.querySelector('.js-form-wrapper');
+    let showButton = document.querySelector('.js-show-form-button');
     let formSignUp = document.querySelector('.js-form-subscribe');
 
-    formSignUp && hiddenFormWrapper && btnShowForm && window && window.urlPrediction && initEmailSub();
+    formSignUp && formWrapper && showButton && window.urlSubscribe && window.urlPrediction && initEmailSub();
+    formSignUp && window.urlSubscribe && window.urlPrediction && createMask();
+
+    function cleanPhone(phone) {
+        phone = phone.replace('(', '');
+        phone = phone.replace(')', '');
+        phone = phone.replace('-', '');
+        phone = phone.replace('+1', '');
+        return phone;
+    }
+
+    function createMask() {
+        let elements = document.getElementsByClassName('js-subscribe-input');
+        for (let i = 0; i < elements.length; i++) {
+            new IMask(elements[i], {
+                mask: '+1(000)000-0000',
+            });
+        }
+    }
+
 
     function initEmailSub() {
-        btnShowForm.addEventListener('click', () => {
-            btnShowForm.classList.add('hide');
-            hiddenFormWrapper.classList.remove('hide');
+        showButton.addEventListener('click', () => {
+            showButton.classList.add('hide');
+            formWrapper.classList.remove('hide');
         });
 
         new JustValidate('.js-form-subscribe', {
             rules: {
-                email: {
+                phone: {
                     required: true,
-                    email: true
                 }
             },
+            messages: {
+                phone:
+                    'Invalid phone',
+            },
             submitHandler: function (form, values, ajax) {
-                // grecaptcha.ready(function () {
-                //     grecaptcha.execute('~~recaptcha id~~', {action: 'subscribe'})
-                //         .then(function (token) {
-                // values.token = token;
                 subscribeUser(ajax, values);
-                // });
-                // });
             }
         });
     }
 
     function subscribeUser(ajax, values) {
+        values.phone = cleanPhone(values.phone);
         ajax({
             url: window.urlSubscribe,
             method: 'POST',

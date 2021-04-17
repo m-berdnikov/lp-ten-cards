@@ -31,50 +31,39 @@
                 </div>
             </header>
             <div class="tarot-ten-card">
-                <div class="tarot-ten-card__subscription">
-                    <h2 class="tarot-ten-card__subscription-desc tarot-ten-card__desc">Your PERSONAL Tarot prediction is here! Hurry up to get your FREE reading while it’s still available!</h2>
-                    <div class="tarot-ten-card__subscription-text">Click below to get reading</div>
-                    <div class="hide js-hidden-form-wrapper">
-                        <div class="tarot-ten-card__subscription-form">
-                            <form class="form js-form-subscribe" method="POST" action="">
-                                <div class="just-validate-tooltip-container">
-                                    <input class="form__input"
-                                           type="email"
-                                           data-validate-field="email"
-                                           name="email"
-                                           placeholder="Enter email">
-                                </div>
-                                <button class="form__btn" type="submit">Subscribe and get my reading</button>
-                                <div class="form__under">
-                                    This site is protected by reCAPTCHA and the Google
-                                    <a target="_blank" href="https://policies.google.com/privacy">Privacy Policy</a> and
-                                    <a target="_blank" href="https://policies.google.com/terms">Terms of Service</a> apply.
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tarot-ten-card__subscription-text js-hidden-form-under">or</div>
-                    </div>
+                <div class="tarot-ten-card__prediction">
+                    <h1 class="tarot-ten-card__prediction-title tarot-ten-card__title hide">Tarot Reading</h1>
+                    <p class="tarot-ten-card__prediction-undertitle">Interpretation of your draw by Nataly Porter</p>
+                    <div class="js-prediction-block">
+                        <!-- <div
+                        class="tarot-ten-card__prediction-list tarot-ten-card__list">
+                        {% for card in cards %}
+                        <a class="tarot-ten-card__prediction-list-item tarot-ten-card__card" data-type="{{ card }}"
+                            href="/articles/the-6-most-terrifying-tarot-cards-what-do-they-mean"></a>
+                        {% endfor %}
+                    </div> -->
+                </div>
 
-                    <div class="tarot-ten-card__subscription-btn tarot-ten-card__subscription-btn--email js-btn-show-form">Continue with Email</div>
-
-                    <div id="gSignInWrapper">
-                        <div id="customBtn" class="customGPlusSignIn">
-                            <div class="tarot-ten-card__subscription-btn tarot-ten-card__subscription-btn--google js-subscribe-google disabled">Continue with Google</div>
-                        </div>
-                    </div>
-
-                    <div class="tarot-ten-card__subscription-btn tarot-ten-card__subscription-btn--fb js-subscribe-fb">Continue with Facebook</div>
-
+                <div class="tarot-ten-card__prediction-bottom">
+                    <p class="tarot-ten-card__prediction-bottom-title tarot-ten-card__desc">Get your Ultimate Horoscope
+                        Pack for
+                        2021 right now</p>
+                    <a class="tarot-ten-card__prediction-bottom-img" href="#"></a>
+                    <p class="tarot-ten-card__prediction-bottom-title tarot-ten-card__desc">Just Confirm your email!</p>
+                    <a class="tarot-ten-card__prediction-bottom-button tarot-ten-card__button" href="#">Continue</a>
+                </div>
             </div>
-        </main>
 
-        <footer class="footer js-footer-anchor">
-            <div class="footer-wrap">
-                <div class="footer__info">Horoscope</div>
-                <a href="#" class="footer__link">Privacy policy</a>
-                <a href="#" class="footer__link">Contact us</a>
-            </div>
-        </footer>
+    </div>
+    </main>
+
+    <footer class="footer js-footer-anchor">
+        <div class="footer-wrap">
+            <div class="footer__info">Horoscope</div>
+            <a href="#" class="footer__link">Privacy policy</a>
+            <a href="#" class="footer__link">Contact us</a>
+        </div>
+    </footer>
     </div>
 
     <script>
@@ -82,7 +71,8 @@
         var urlRedirect = '';
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <!-- <script defer src="../build/js/selector.min.js"></script> -->
+    <script defer src="../src/js/prediction.js"></script>
+    <!-- <script defer src="../build/js/prediction.min.js"></script> -->
 </body>
 
 </html>

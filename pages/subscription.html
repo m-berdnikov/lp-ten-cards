@@ -35,12 +35,12 @@
                     <h2 class="tarot-ten-card__subscription-desc tarot-ten-card__desc">Your PERSONAL Tarot prediction is
                         here! Hurry up to get your FREE reading while it’s still available!</h2>
                     <div class="tarot-ten-card__subscription-text">Click below to get reading</div>
-                    <div class="hide js-hidden-form-wrapper">
+                    <div class="hide js-form-wrapper">
                         <div class="tarot-ten-card__subscription-form">
                             <form class="form js-form-subscribe" method="POST" action="">
                                 <div class="just-validate-tooltip-container">
-                                    <input class="form__input" type="email" data-validate-field="email" name="email"
-                                        placeholder="Enter email">
+                                    <input class="form__input js-subscribe-input" type="text"
+                                        data-validate-field="phone" name="phone" placeholder="+1(_ _ _)_ _ _-_ _ _ _">
                                 </div>
                                 <button class="form__btn" type="submit">Subscribe and get my reading</button>
                                 <div class="form__under">
@@ -51,12 +51,10 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="tarot-ten-card__subscription-text js-hidden-form-under">or</div>
                     </div>
-
                     <div
-                        class="tarot-ten-card__subscription-btn tarot-ten-card__subscription-btn--email js-btn-show-form">
-                        Continue with Email</div>
+                        class="tarot-ten-card__subscription-btn tarot-ten-card__subscription-btn--email js-show-form-button">
+                        Continue with Phone</div>
                 </div>
             </div>
         </main>
@@ -73,6 +71,7 @@
         var urlSubscribe = 'https://just-validate-api.herokuapp.com/submit';
         var urlPrediction = 'prediction.html';
     </script>
+    <script src="https://unpkg.com/imask"></script>
     <script defer src="../vendor/just-validate/dist/js/just-validate.min.js"></script>
     <script defer src="../build/js/validation.min.js"></script>
 </body>
