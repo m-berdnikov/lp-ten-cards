@@ -2,21 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Horoscope.us</title>
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="fb:app_id" content="{{ fb.appId }}">
+    @@include('components/_meta.html', {
+    "title": "Main"
+    })
 
-    <link rel="stylesheet" type="text/css" href="../build/css/style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../build/css/style.min.css"> -->
+    @@include('components/_favicon.html')
+
+    @@include('components/_head.html')
 
     <style>
         @media screen and (min-width: 440px) {
@@ -52,7 +44,6 @@
             }
         }
     </style>
-
 </head>
 
 <body>
@@ -61,29 +52,20 @@
             <div class="bg__img"></div>
         </div>
         <main class="main">
-            <header class="header">
-                <div class="header__wrap">
-                    <div class="header__logo" title="Horoscope"></div>
-                </div>
-            </header>
-            <include src="/pages/_header.html"></include>
+            @@include('components/_header.html')
             <div class="tarot-ten-card">
                 <div class="tarot-ten-card__index">
                     <div class="tarot-ten-card__index-head">
                         <h1 class="tarot-ten-card__index-title tarot-ten-card__title">Free tarot reading</h1>
                         <h2 class="tarot-ten-card__index-desc tarot-ten-card__desc">Find out about your Love,
-                            Relationships, Finance
-                            or Career</h2>
+                            Relationships, Finance or Career</h2>
                         <p class="tarot-ten-card__index-text">Before choosing your cards, think about a question
                             that you want a clear answer to. Then you can choose 10 cards from the tarot deck and get
-                            your free
-                            tarot reading!</p>
+                            your free tarot reading!</p>
                         <div class="tarot-ten-card__index-button tarot-ten-card__button js-auto-choose-button">Choose
-                            <span class="js-auto-choose-count">10</span> cards from
-                            the deck below
+                            <span class="js-auto-choose-count">10</span> cards from the deck below
                         </div>
                     </div>
-
                     <div class="tarot-ten-card__index-list tarot-ten-card__list js-deck">
                         <div class="tarot-ten-card__index-list-item js-card-flipper-container js-card" data-id="1"
                             data-choose="false" style="left: 0px; top: -5px;">
@@ -242,21 +224,14 @@
                 </div>
             </div>
         </main>
-
-        <footer class="footer js-footer-anchor">
-            <div class="footer-wrap">
-                <div class="footer__info">Horoscope</div>
-                <a href="#" class="footer__link">Privacy policy</a>
-                <a href="#" class="footer__link">Contact us</a>
-            </div>
-        </footer>
+        @@include('components/_footer.html')
     </div>
 
     <script>
         var urlRedirect = 'selector-strengths.html';
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script defer src="../build/js/cards.min.js"></script>
+    <script defer src="../js/cards.min.js"></script>
 </body>
 
 </html>

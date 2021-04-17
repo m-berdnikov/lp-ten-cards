@@ -2,20 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Horoscope.us</title>
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="fb:app_id" content="{{ fb.appId }}">
-    <link rel="stylesheet" type="text/css" href="../build/css/style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../build/css/style.min.css"> -->
+    @@include('components/_meta.html', {
+    "title": "Prediction"
+    })
+
+    @@include('components/_favicon.html')
+
+    @@include('components/_head.html')
     <link rel="stylesheet" href="../vendor/just-validate/dist/css/justValidateTooltip.min.css">
 </head>
 
@@ -25,45 +18,26 @@
             <div class="bg__img"></div>
         </div>
         <main class="main">
-            <header class="header">
-                <div class="header__wrap">
-                    <div class="header__logo" title="Horoscope"></div>
-                </div>
-            </header>
+            @@include('components/_header.html')
             <div class="tarot-ten-card">
                 <div class="tarot-ten-card__prediction">
                     <h1 class="tarot-ten-card__prediction-title tarot-ten-card__title hide">Tarot Reading</h1>
                     <p class="tarot-ten-card__prediction-undertitle">Interpretation of your draw by Nataly Porter</p>
                     <div class="js-prediction-block">
-                        <!-- <div
-                        class="tarot-ten-card__prediction-list tarot-ten-card__list">
-                        {% for card in cards %}
-                        <a class="tarot-ten-card__prediction-list-item tarot-ten-card__card" data-type="{{ card }}"
-                            href="/articles/the-6-most-terrifying-tarot-cards-what-do-they-mean"></a>
-                        {% endfor %}
-                    </div> -->
+                    </div>
+                    <div class="tarot-ten-card__prediction-bottom">
+                        <p class="tarot-ten-card__prediction-bottom-title tarot-ten-card__desc">Get your Ultimate
+                            Horoscope Pack for 2021 right now</p>
+                        <a class="tarot-ten-card__prediction-bottom-img" href="#"></a>
+                        <p class="tarot-ten-card__prediction-bottom-title tarot-ten-card__desc">Just Confirm your email!
+                        </p>
+                        <a class="tarot-ten-card__prediction-bottom-button tarot-ten-card__button" href="#">Continue</a>
+                    </div>
                 </div>
 
-                <div class="tarot-ten-card__prediction-bottom">
-                    <p class="tarot-ten-card__prediction-bottom-title tarot-ten-card__desc">Get your Ultimate Horoscope
-                        Pack for
-                        2021 right now</p>
-                    <a class="tarot-ten-card__prediction-bottom-img" href="#"></a>
-                    <p class="tarot-ten-card__prediction-bottom-title tarot-ten-card__desc">Just Confirm your email!</p>
-                    <a class="tarot-ten-card__prediction-bottom-button tarot-ten-card__button" href="#">Continue</a>
-                </div>
             </div>
-
-    </div>
-    </main>
-
-    <footer class="footer js-footer-anchor">
-        <div class="footer-wrap">
-            <div class="footer__info">Horoscope</div>
-            <a href="#" class="footer__link">Privacy policy</a>
-            <a href="#" class="footer__link">Contact us</a>
-        </div>
-    </footer>
+        </main>
+        @@include('components/_footer.html')
     </div>
 
     <script>
@@ -71,8 +45,7 @@
         var urlRedirect = '';
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script defer src="../src/js/prediction.js"></script>
-    <!-- <script defer src="../build/js/prediction.min.js"></script> -->
+    <script defer src="../js/prediction.min.js"></script>
 </body>
 
 </html>

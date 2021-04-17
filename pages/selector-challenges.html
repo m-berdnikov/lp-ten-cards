@@ -2,28 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Horoscope.us</title>
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="fb:app_id" content="{{ fb.appId }}">
+    @@include('components/_meta.html', {
+    "title": "Selector"
+    })
 
-    <link rel="stylesheet" type="text/css" href="../build/css/style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../build/css/style.min.css"> -->
+    @@include('components/_favicon.html')
+
+    @@include('components/_head.html')
 
     <style>
         .bg {
             display: none;
         }
     </style>
-
 </head>
 
 <body>
@@ -32,11 +23,7 @@
             <div class="bg__img"></div>
         </div>
         <main class="main">
-            <header class="header">
-                <div class="header__wrap">
-                    <div class="header__logo" title="Horoscope"></div>
-                </div>
-            </header>
+            @@include('components/_header.html')
             <div class="tarot-ten-card">
                 <div class="tarot-ten-card__selector">
                     <h1 class="tarot-ten-card__selector-title tarot-ten-card__title">Tarot Reading</h1>
@@ -69,14 +56,7 @@
                 </div>
             </div>
         </main>
-
-        <footer class="footer js-footer-anchor">
-            <div class="footer-wrap">
-                <div class="footer__info">Horoscope</div>
-                <a href="#" class="footer__link">Privacy policy</a>
-                <a href="#" class="footer__link">Contact us</a>
-            </div>
-        </footer>
+        @@include('components/_footer.html')
     </div>
 
     <script>
@@ -84,9 +64,7 @@
         var urlRedirect = 'selector-subconscious.html';
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script defer src="../build/js/selector.min.js"></script>
-    <!-- <script defer src="build/js/article-view.js"></script> -->
-
+    <script defer src="../js/selector.min.js"></script>
 </body>
 
 </html>
