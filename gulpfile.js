@@ -95,7 +95,6 @@ exports.sass = sassFun;
 exports.img = compressImg;
 exports.includeHTML = includeHTML;
 
-exports.default = parallel(sassFun, compressJS, compressImg, placeFavicon, includeHTML, browsersync, startWatch);
+exports.default = parallel(cleanBuild, sassFun, compressCSS, compressJS, placeFavicon, compressImg, includeHTML, browsersync, startWatch);
 exports.css = series(sassFun, compressCSS);
 exports.build = series(cleanBuild, sassFun, compressCSS, compressJS, placeFavicon, compressImg, includeHTML);
-exports.startWatch = startWatch;
