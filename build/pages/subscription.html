@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<title>Subscription | Horoscope.us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+<link rel="manifest" href="../favicon/site.webmanifest">
+<link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="../favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+
+
+
+    <link rel="stylesheet" href="../vendor/just-validate/dist/css/justValidateTooltip.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="bg">
+            <div class="bg__img"></div>
+        </div>
+        <main class="main">
+            <header class="header">
+    <div class="header__wrap">
+        <div class="header__logo" title="Horoscope"></div>
+    </div>
+</header>
+
+            <div class="tarot-ten-card">
+                <div class="tarot-ten-card__subscription">
+                    <h2 class="tarot-ten-card__subscription-desc tarot-ten-card__desc">Your PERSONAL Tarot prediction is
+                        here! Hurry up to get your FREE reading while it’s still available!</h2>
+                    <div class="tarot-ten-card__subscription-text">Click below to get reading</div>
+                    <div class="hide js-form-wrapper">
+                        <form class="tarot-ten-card__subscription-form form js-form-subscribe" method="POST" action="">
+                            <div class="just-validate-tooltip-container">
+                                <input class="form__input js-subscribe-input" type="text" data-validate-field="phone"
+                                    name="phone" placeholder="+1(_ _ _)_ _ _-_ _ _ _">
+                            </div>
+                            <button class="form__button" type="submit">Subscribe and get my reading</button>
+                        </form>
+                    </div>
+                    <div class="tarot-ten-card__subscription-button js-show-form-button">
+                        Continue with Phone</div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer js-footer-anchor">
+    <div class="footer-wrap">
+        <div class="footer__info">Horoscope</div>
+        <a href="#" class="footer__link">Privacy policy</a>
+        <a href="#" class="footer__link">Contact us</a>
+    </div>
+</footer>
+
+    </div>
+
+    <script>
+        var urlSubscribe = 'https://just-validate-api.herokuapp.com/submit';
+        var urlPrediction = 'prediction.html';
+    </script>
+    <script src="https://unpkg.com/imask"></script>
+    <script defer src="../vendor/just-validate/dist/js/just-validate.min.js"></script>
+    <script defer src="../js/validation.min.js"></script>
+</body>
+
+</html>
