@@ -3,594 +3,422 @@
 @import "_mixin";
 @import "_colors";
 @import "_rules";
-@import "_footer_to_the_bottom";
 @import "_animation";
+@import "_forms";
 
 body {
-  position: relative;
-  min-width: 320px;
-  background: $dark;
-  font: 400 14px/18px $font;
-  color: $yellow;
-  text-align: center;
+    position: relative;
+    min-width: 320px;
+    background: $dark;
+    font: 400 14px/18px $font;
+    color: $yellow;
+    text-align: center;
 }
 
 .wrapper {
-  position: relative;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 100vh;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .main {
-  z-index: 5;
+    z-index: 5;
 }
 
 .bg {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-
-  &__img {
-    margin: 0 auto;
-    max-width: 370px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
     width: 100%;
-    height: 295px;
-    background: url("../img/bg.png") center / cover no-repeat;
-  }
+
+    &__img {
+        margin: 0 auto;
+        max-width: 370px;
+        width: 100%;
+        height: 295px;
+        background: url("../img/bg.png") center / cover no-repeat;
+    }
 }
 
 /******************* BEGIN: HEADER *******************/
 
 .header {
-  &-wrap {
-    padding: 20px 0;
-    box-sizing: border-box;
-  }
+    &-wrap {
+        padding: 20px 0;
+        box-sizing: border-box;
+    }
 
-  &__logo {
-    position: relative;
-    z-index: 5;
-    margin: 20px auto;
-    display: block;
-    width: 214px;
-    height: 36px;
-    background: transparent url("../img/icon/logo.svg") center / cover no-repeat;
-    text-decoration: none;
-  }
+    &__logo {
+        position: relative;
+        z-index: 5;
+        margin: 20px auto;
+        display: block;
+        width: 214px;
+        height: 36px;
+        background: transparent url("../img/icon/logo.svg") center / cover no-repeat;
+        text-decoration: none;
+    }
 }
 
 /******************* END: HEADER *******************/
 
-@import "_forms";
-
 /******************* BEGIN: TEN TAROT CARDS *******************/
+
 .tarot-ten-card {
-  @include widthContent(750px, 95%, 0);
+    @include widthContent(750px, 95%, 0);
 
-  &__title {
-    margin: 0;
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
-  &__desc {
-    margin: 0;
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  &__button {
-    display: block;
-    width: 270px;
-    height: 50px;
-    border-radius: 40px;
-    background-color: $yellow;
-    font-size: 14px;
-    line-height: 50px;
-    font-weight: 700;
-    color: $black;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: 0 8px 20px 0 $yellow;
-    }
-  }
-
-  &__list {
-    position: relative;
-    margin: 30px auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  &__card {
-    margin: 0 2px 5px;
-    width: 80px;
-    height: 118px;
-    border-radius: 10px;
-    background: $yellow center / cover no-repeat;
-    cursor: pointer;
-
-    &[data-type = 'back'] {
-      background-image: url("../img/cards/back.png");
+    &__title {
+        margin: 0;
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 
-    &[data-type = 'hermit'] {
-      background-image: url("../img/cards/hermit.png");
+    &__desc {
+        margin: 0;
+        font-size: 18px;
+        line-height: 24px;
     }
 
-    &[data-type = 'death'] {
-      background-image: url("../img/cards/death.png");
+    &__button {
+        display: block;
+        width: 270px;
+        height: 50px;
+        border-radius: 40px;
+        background-color: $yellow;
+        font-size: 14px;
+        line-height: 50px;
+        font-weight: 700;
+        color: $black;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 8px 20px 0 $yellow;
+        }
     }
 
-    &[data-type = 'handet-man'] {
-      background-image: url("../img/cards/handet-man.png");
+    &__list {
+        position: relative;
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    &[data-type = 'justice'] {
-      background-image: url("../img/cards/justice.png");
-    }
-
-    &[data-type = 'devil'] {
-      background-image: url("../img/cards/devil.png");
-    }
-
-    &[data-type = 'sun'] {
-      background-image: url("../img/cards/sun.png");
-    }
-
-    &[data-type = 'lovers'] {
-      background-image: url("../img/cards/lovers.png");
-    }
-
-    &[data-type = 'whell-of-fortune'] {
-      background-image: url("../img/cards/whell-of-fortune.png");
-    }
-
-    &[data-type = 'temperance'] {
-      background-image: url("../img/cards/temperance.png");
-    }
-
-    &[data-type = 'strength'] {
-      background-image: url("../img/cards/strength.png");
-    }
-
-    &:hover {
-      box-shadow: 0 8px 20px 0 $yellow;
-    }
-  }
-
-  &__index {
-    padding-top: 157px;
-
-    &-desc {
-      padding: 5px 0 10px;
-    }
-
-    &-button {
-      margin: 20px auto;
-      padding: 10px 50px;
-      height: 60px;
-      box-sizing: border-box;
-      font-size: 16px;
-      line-height: 20px;
-    }
-
-    &-list {
-      margin-top: 50px;
-      //padding: 20px 0;
-      max-width: 330px;
-      height: 140px;
-
-      &[data-type = 'first'] {
-        height: 280px;
-      }
-
-      &[data-type = 'fifth'] {
-        height: 410px;
-      }
-
-      &[data-type = 'ninth'] {
-        height: 530px;
-      }
-
-      &-item {
-        position: absolute;
-        perspective: none;
+    &__card {
+        margin: 0 2px 5px;
         width: 80px;
         height: 118px;
-
-
-        &[data-position = 'list'] {
-          position: relative;
-
-        }
-
-        &--animation {
-          transition: all 1.5s ease-in-out;
-
-          &-top {
-            transition: all 0.4s ease-in-out;
-          }
-        }
-
-        &-flipper {
-          transition-duration: 0.6s;
-          transform-style: preserve-3d;
-        }
-
-        &-front {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 80px;
-          height: 118px;
-          backface-visibility: hidden;
-          transform: rotateY(180deg);
-        }
-
-        &-back {
-          backface-visibility: hidden;
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 2;
-        }
-      }
-    }
-  }
-
-  &__selector {
-    padding-top: 15px;
-
-    &-desc {
-      font-weight: 400;
-
-      &-final {
-        padding: 20px 0;
-        font-weight: 700;
-        color: $white;
-      }
-    }
-
-    &-list {
-      max-width: 600px;
-
-      &[data-type = 'circle' ] {
-        min-height: 400px;
-      }
-
-      &--final {
-        margin: 0 auto;
-      }
-
-      &-item {
-        visibility: visible;
-        opacity: 1;
-        transition: all 0.5s ease-in-out;
-
-        &[data-state = 'circle'] {
-          transform-origin: 30px 155px;
-          width: 59px;
-          height: 87px;
-        }
-      }
-
-      &-line {
-        position: absolute;
-        top: 95px;
-        width: 2px;
-        height: 120px;
-        background-color: $yellow;
-        visibility: visible;
-        opacity: 1;
-        transition: all 1s ease-in-out;
-      }
-
-      &-hidden {
-        visibility: hidden;
-        opacity: 0;
-      }
-    }
-  }
-
-  &__subscription {
-    margin: 0 auto;
-    padding: 177px 10px 10px;
-    max-width: 500px;
-    border-radius: 20px;
-    box-sizing: border-box;
-    text-align: center;
-
-    &-title {
-
-    }
-
-    &-text {
-      margin: 10px auto;
-    }
-
-    &-btn {
-      width: 100%;
-      max-width: 421px;
-      height: 60px;
-      line-height: 60px;
-      border-radius: 40px;
-      display: block;
-      text-decoration: none;
-      margin: 15px auto;
-      cursor: pointer;
-      border: 0;
-      color: $white;
-      background: $grey 27px center / 20px no-repeat;
-      font-weight: bold;
-
-      &--email {
-        background-color: $yellow;
-        color: $black;
-      }
-
-      &--fb {
-        background-color: $blue;
-        background-image: url("../img/icon/icon-fb.svg");
-        background-size: 11px;
-      }
-
-      &--google {
-        background-color: $red;
-        background-image: url("../img/icon/icon-google.svg");
-
-        &.disabled {
-          opacity: 0.75;
-          filter: grayscale(100%);
-          pointer-events: none;
-        }
-      }
-    }
-  }
-
-  &__prediction {
-    padding-top: 157px;
-
-    &-undertitle {
-      margin: 0 auto;
-      padding-bottom: 20px;
-      max-width: 225px;
-    }
-
-    &-type {
-      padding-bottom: 20px;
-      font-weight: 700;
-      color: $white;
-    }
-
-    &-list {
-      margin: 0 auto 30px;
-
-      &-item {
-        display: block;
-      }
-    }
-
-    &-text {
-      margin: 0 auto 20px;
-      width: 95%;
-      color: $white;
-      text-align: left;
-    }
-
-    &-bottom {
-      &-title {
-        margin: 0 auto;
-        max-width: 280px;
-        font-weight: 700;
-        color: $white;
-      }
-
-      &-img {
-        margin: 0 auto;
-        display: block;
-        max-width: 370px;
-        height: 220px;
-        background: url("../img/pack.png") center / cover no-repeat;
+        border-radius: 10px;
+        background: $yellow center / cover no-repeat;
         cursor: pointer;
-      }
 
-      &-button {
-        margin: 20px auto;
-      }
+        &[data-type="back"] {
+            background-image: url("../img/cards/back.png");
+        }
+
+        &[data-type="hermit"] {
+            background-image: url("../img/cards/hermit.png");
+        }
+
+        &[data-type="death"] {
+            background-image: url("../img/cards/death.png");
+        }
+
+        &[data-type="handet-man"] {
+            background-image: url("../img/cards/handet-man.png");
+        }
+
+        &[data-type="justice"] {
+            background-image: url("../img/cards/justice.png");
+        }
+
+        &[data-type="devil"] {
+            background-image: url("../img/cards/devil.png");
+        }
+
+        &[data-type="sun"] {
+            background-image: url("../img/cards/sun.png");
+        }
+
+        &[data-type="lovers"] {
+            background-image: url("../img/cards/lovers.png");
+        }
+
+        &[data-type="whell-of-fortune"] {
+            background-image: url("../img/cards/whell-of-fortune.png");
+        }
+
+        &[data-type="temperance"] {
+            background-image: url("../img/cards/temperance.png");
+        }
+
+        &[data-type="strength"] {
+            background-image: url("../img/cards/strength.png");
+        }
+
+        &:hover {
+            box-shadow: 0 8px 20px 0 $yellow;
+        }
     }
-  }
+
+    &__index {
+        padding-top: 157px;
+
+        &-desc {
+            padding: 5px 0 10px;
+        }
+
+        &-button {
+            margin: 20px auto;
+            padding: 10px 50px;
+            height: 60px;
+            box-sizing: border-box;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &-list {
+            margin-top: 50px;
+            max-width: 330px;
+            height: 140px;
+
+            &[data-type="first"] {
+                height: 280px;
+            }
+
+            &[data-type="fifth"] {
+                height: 410px;
+            }
+
+            &[data-type="ninth"] {
+                height: 530px;
+            }
+
+            &-item {
+                position: absolute;
+                perspective: none;
+                width: 80px;
+                height: 118px;
+
+                &[data-position="list"] {
+                    position: relative;
+                }
+
+                &--animation {
+                    transition: all 1.5s ease-in-out;
+
+                    &-top {
+                        transition: all 0.4s ease-in-out;
+                    }
+                }
+
+                &-flipper {
+                    transition-duration: 0.6s;
+                    transform-style: preserve-3d;
+                }
+
+                &-front {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 80px;
+                    height: 118px;
+                    backface-visibility: hidden;
+                    transform: rotateY(180deg);
+                }
+
+                &-back {
+                    backface-visibility: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    &__selector {
+        padding-top: 15px;
+
+        &-desc {
+            font-weight: 400;
+
+            &-final {
+                padding: 20px 0;
+                font-weight: 700;
+                color: $white;
+            }
+        }
+
+        &-list {
+            max-width: 600px;
+
+            &[data-type="circle"] {
+                min-height: 400px;
+            }
+
+            &--final {
+                margin: 0 auto;
+            }
+
+            &-item {
+                visibility: visible;
+                opacity: 1;
+                transition: all 0.5s ease-in-out;
+
+                &[data-state="circle"] {
+                    transform-origin: 30px 155px;
+                    width: 59px;
+                    height: 87px;
+                }
+            }
+
+            &-line {
+                position: absolute;
+                top: 95px;
+                width: 2px;
+                height: 120px;
+                background-color: $yellow;
+                visibility: visible;
+                opacity: 1;
+                transition: all 1s ease-in-out;
+            }
+
+            &-hidden {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+    }
+
+    &__subscription {
+        margin: 0 auto;
+        padding: 177px 10px 10px;
+        max-width: 500px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        text-align: center;
+
+        &-text {
+            margin: 10px auto;
+        }
+
+        &-button {
+            margin: 15px auto;
+            display: block;
+            width: 100%;
+            max-width: 421px;
+            height: 60px;
+            border-radius: 40px;
+            border: 0;
+            background-color: $yellow;
+            line-height: 60px;
+            font-weight: 400;
+            color: $black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    &__prediction {
+        padding-top: 157px;
+
+        &-undertitle {
+            margin: 0 auto;
+            padding-bottom: 20px;
+            max-width: 225px;
+        }
+
+        &-type {
+            padding-bottom: 20px;
+            font-weight: 700;
+            color: $white;
+        }
+
+        &-list {
+            margin: 0 auto 30px;
+
+            &-item {
+                display: block;
+            }
+        }
+
+        &-text {
+            margin: 0 auto 20px;
+            width: 95%;
+            color: $white;
+            text-align: left;
+        }
+
+        &-bottom {
+            &-title {
+                margin: 0 auto;
+                max-width: 280px;
+                font-weight: 700;
+                color: $white;
+            }
+
+            &-img {
+                margin: 0 auto;
+                display: block;
+                max-width: 370px;
+                height: 220px;
+                background: url("../img/pack.png") center / cover no-repeat;
+                cursor: pointer;
+            }
+
+            &-button {
+                margin: 20px auto;
+            }
+        }
+    }
 }
 
 /******************* END: TEN TAROT CARDS *******************/
 
-/******************* BEGIN: ARTICLE *******************/
-
-.article {
-  &-set {
-    max-width: 750px;
-    margin: 30px auto;
-
-    &-block {
-      display: block;
-      width: 100%;
-      margin: 20px auto;
-      background: transparent;
-      border: 1px solid $orange;
-      box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.06);
-      box-sizing: border-box;
-      padding: 40px;
-      text-decoration: none;
-      color: $white;
-      text-align: left;
-
-      &__image {
-        width: 100%;
-        height: 200px;
-        background: $violetDark no-repeat center / cover;
-      }
-
-      &__title {
-        color: $orange;
-        font-size: 21px;
-        font-weight: bold;
-        margin: 20px auto 5px;
-      }
-
-      &__desc {
-        color: $white;
-        font-size: 16px;
-        font-weight: 400;
-        margin: 5px auto 0;
-      }
-
-      &__btn {
-        width: 100%;
-        max-width: 300px;
-        text-align: center;
-        height: 60px;
-        line-height: 60px;
-        border-radius: 40px;
-        display: block;
-        text-decoration: none;
-        margin: 15px auto;
-        cursor: pointer;
-        border: 0;
-        color: $black;
-        background: $orange;
-        font-weight: bold;
-      }
-
-      &__content {
-        & > div {
-          height: 0;
-          opacity: 0;
-          transition: 0.2s;
-
-          &.open {
-            margin: 20px auto 0;
-            height: auto;
-            opacity: 1;
-          }
-        }
-
-        & h3 {
-          color: $orange;
-        }
-      }
-    }
-  }
-}
-
-/******************* END: ARTICLE *******************/
-
 /******************* BEGIN: FOOTER *******************/
+
 .footer {
-  width: 100%;
+    width: 100%;
 
-  &-wrap {
-    @include widthContent(400px, 95%, 0);
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    font-size: 12px;
-    color: $white;
-    text-align: center;
-    opacity: 0.4;
-  }
+    &-wrap {
+        @include widthContent(400px, 95%, 0);
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        font-size: 12px;
+        color: $white;
+        text-align: center;
+        opacity: 0.4;
+    }
 
-  &__info {
-    display: inline-block;
-    vertical-align: middle;
-  }
+    &__info {
+        display: inline-block;
+        vertical-align: middle;
+    }
 
-  &__link {
-    color: $white;
-    text-decoration: none;
-    display: inline-block;
-    vertical-align: middle;
-  }
+    &__link {
+        color: $white;
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
 
 /******************* END: FOOTER *******************/
 
-/******************* BEGIN: RECOMMENDED PARTNERS *******************/
-
-.recommended-partners {
-  margin: 0 auto;
-
-  &__title {
-    padding: 1px 5px;
-    text-align: left;
-    background: $silver;
-    color: $black;
-    text-transform: uppercase;
-    font-size: 12px;
-    border-radius: 2px;
-    font-weight: bold;
-    width: fit-content;
-    margin: 0 0 5px;
-  }
-}
-
-/******************* END: RECOMMENDED PARTNERS *******************/
-
-/******************* BEGIN: CUSTOM LINK ADS *******************/
-
-.link-banner {
-  max-width: 750px;
-  margin: 20px auto;
-  text-align: center;
-
-  &__title {
-    text-align: left;
-    background: $silver;
-    color: $black;
-    text-transform: uppercase;
-    font-size: 12px;
-    border-radius: 2px;
-    padding: 1px 5px;
-    font-weight: bold;
-    width: fit-content;
-    margin: 0 0 5px;
-  }
-
-  &-wrap {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  &__item {
-    width: 100%;
-    font-weight: 600;
-    color: $black;
-    text-decoration: none;
-    background: $yellow;
-    margin-bottom: 5px;
-    padding: 15px 0;
-    border-radius: 30px;
-    max-width: 370px;
-    font-size: 14px;
-  }
-}
-
-/******************* END: CUSTOM LINK ADS *******************/
-
 /******************* BEGIN: MEDIAS *******************/
+
 @import "medias";
+
 /******************* END: MEDIAS *******************/

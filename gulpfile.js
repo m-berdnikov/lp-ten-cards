@@ -69,6 +69,11 @@ function placeFavicon() {
         .pipe(dest(`${ASSETS_PATH_BUILD}/favicon`))
 }
 
+function placeVendor() {
+    return src('vendor/**/*')
+        .pipe(dest(`${ASSETS_PATH_BUILD}/vendor`))
+}
+
 function cleanBuild() {
     return del(`${ASSETS_PATH_BUILD}/**/*`, { force: true })
 }
@@ -95,6 +100,6 @@ exports.sass = sassFun;
 exports.img = compressImg;
 exports.includeHTML = includeHTML;
 
-exports.default = parallel(sassFun, compressCSS, compressJS, placeFavicon, compressImg, includeHTML, browsersync, startWatch);
+exports.default = parallel(browsersync, startWatch);
 exports.css = series(sassFun, compressCSS);
-exports.build = series(cleanBuild, sassFun, compressCSS, compressJS, placeFavicon, compressImg, includeHTML);
+exports.build = series(cleanBuild, sassFun, compressCSS, compressJS, placeFavicon, placeVendor, compressImg, includeHTML);

@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
     function initSub() {
         showButton.addEventListener('click', () => {
             showButton.classList.add('hide');

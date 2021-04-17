@@ -1,147 +1,145 @@
 @media screen and (max-width: 765px) {
-  .recommended-partners {
-    width: 95%;
-  }
-
-  .link-banner {
-    max-width: 765px;
-
-    &-wrap {
-      display: block;
+    .recommended-partners {
+        width: 95%;
     }
 
-    &__item {
-      display: block;
-      font-size: 15px;
-      max-width: 765px;
-      padding: 12px 0;
-      margin-bottom: 2px;
-      overflow: hidden;
+    .link-banner {
+        max-width: 765px;
+
+        &-wrap {
+            display: block;
+        }
+
+        &__item {
+            display: block;
+            font-size: 15px;
+            max-width: 765px;
+            padding: 12px 0;
+            margin-bottom: 2px;
+            overflow: hidden;
+        }
     }
-  }
 }
 
 @media screen and (max-width: 435px) {
-  .footer {
-    &-wrap {
-      flex-direction: column;
+    .footer {
+        &-wrap {
+            flex-direction: column;
+        }
     }
-  }
 }
 
 @media screen and (min-width: 385px) {
-  .tarot-ten-card {
-    &__index {
-      &-list {
-        max-width: 355px;
-      }
+    .tarot-ten-card {
+        &__index {
+            &-list {
+                max-width: 355px;
+            }
+        }
     }
-  }
 }
 
 @media screen and (min-width: 440px) {
-  .bg {
-    &__img {
-      max-width: 1280px;
-      width: 100%;
-      height: 404px;
-      background: url("../img/bg-big.png") -180px / cover no-repeat;
-    }
-  }
-
-  .tarot-ten-card {
-    &__index {
-      padding-top: 40px;
-
-      &-head {
-        margin-left: auto;
-        max-width: 390px;
-        text-align: left;
-      }
-
-      &-list {
-        margin-top: 50px;
-      }
-    }
-
-    &__subscription {
-      padding-top: 37px;
-    }
-
-    &__prediction {
-      padding-top: 10px;
-
-      &-undertitle {
-        padding-bottom: 40px;
-      }
-
-      &-bottom {
-        &-img {
-          max-width: 600px;
-          height: 350px;
+    .bg {
+        &__img {
+            max-width: 1280px;
+            width: 100%;
+            height: 404px;
+            background: url("../img/bg-big.png") -180px / cover no-repeat;
         }
-      }
     }
-  }
+
+    .tarot-ten-card {
+        &__index {
+            padding-top: 40px;
+
+            &-head {
+                margin-left: auto;
+                max-width: 390px;
+                text-align: left;
+            }
+
+            &-list {
+                margin-top: 50px;
+            }
+        }
+
+        &__subscription {
+            padding-top: 37px;
+        }
+
+        &__prediction {
+            padding-top: 10px;
+
+            &-undertitle {
+                padding-bottom: 40px;
+            }
+
+            &-bottom {
+                &-img {
+                    max-width: 600px;
+                    height: 350px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 525px) {
-  .tarot-ten-card {
-    &__selector {
-      &-list {
-        &[data-state = 'circle'] {
-          height: 560px;
-        }
+    .tarot-ten-card {
+        &__selector {
+            &-list {
+                &[data-state="circle"] {
+                    height: 560px;
+                }
 
-        &-line {
-          top: 160px;
-          width: 3px;
-          height: 182px;
-        }
+                &-line {
+                    top: 160px;
+                    width: 3px;
+                    height: 182px;
+                }
 
-        &-item {
-          &[data-state = 'circle'] {
-            transform-origin: 44px 253px;
-            width: 89px;
-            height: 131px;
-          }
+                &-item {
+                    &[data-state="circle"] {
+                        transform-origin: 44px 253px;
+                        width: 89px;
+                        height: 131px;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
 
 @media screen and (min-width: 599px) {
-  .tarot-ten-card {
-    &__card {
-      width: 130px;
-      height: 190px;
+    .tarot-ten-card {
+        &__card {
+            width: 130px;
+            height: 190px;
+        }
+
+        &__index {
+            &-list {
+                max-width: 565px;
+                height: 200px;
+
+                &[data-type="first"] {
+                    height: 450px;
+                }
+
+                &[data-type="fifth"] {
+                    height: 650px;
+                }
+
+                &[data-type="ninth"] {
+                    height: 850px;
+                }
+
+                &-item {
+                    width: 130px;
+                    height: 190px;
+                }
+            }
+        }
     }
-
-    &__index {
-      &-list {
-        max-width: 565px;
-        height: 200px;
-
-        &[data-type = 'first'] {
-          height: 450px;
-        }
-
-        &[data-type = 'fifth'] {
-          height: 650px;
-        }
-
-        &[data-type = 'ninth'] {
-          height: 850px;
-        }
-
-        &-item {
-          width: 130px;
-          height: 190px;
-        }
-      }
-    }
-  }
 }
-
-
