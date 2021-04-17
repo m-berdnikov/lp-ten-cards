@@ -1,21 +1,21 @@
 {
-  "name": "skeleton-simple",
+  "name": "ten-tarot-cards",
   "version": "1.0.0",
-  "description": "Simple site template",
+  "description": "LP with card animation",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m-berdnikov/skeleton-simple.git"
+    "url": "git+https://github.com/m-berdnikov/ten-tarot-cards.git"
   },
   "author": "Maxim Berdnikov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/m-berdnikov/skeleton-simple/issues"
+    "url": "https://github.com/m-berdnikov/ten-tarot-cards/issues"
   },
-  "homepage": "https://github.com/m-berdnikov/skeleton-simple#readme",
+  "homepage": "https://github.com/m-berdnikov/ten-tarot-cards#readme",
   "dependencies": {
     "gulp": "^4.0.2"
   },
