@@ -1,3 +1,5 @@
+'use strict';
+
 document.addEventListener('DOMContentLoaded', () => {
 
     let formWrapper = document.querySelector('.js-form-wrapper');
