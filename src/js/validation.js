@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let showButton = document.querySelector('.js-show-form-button');
     let formSignUp = document.querySelector('.js-form-subscribe');
 
-    formSignUp && formWrapper && showButton && window.urlSubscribe && window.urlPrediction && initEmailSub();
+    formSignUp && formWrapper && showButton && window.urlSubscribe && window.urlPrediction && initSub();
     formSignUp && window.urlSubscribe && window.urlPrediction && createMask();
 
     function cleanPhone(phone) {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    function initEmailSub() {
+    function initSub() {
         showButton.addEventListener('click', () => {
             showButton.classList.add('hide');
             formWrapper.classList.remove('hide');
