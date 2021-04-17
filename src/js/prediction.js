@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     predictionBlock && placePredictio();
 
     function placePredictio() {
-        predictions.forEach((item, index) => {ç
+        predictions.forEach((item, index) => {
             placeText(item.title, 'tarot-ten-card__prediction-type tarot-ten-card__desc');
 
             if (index === 0) {
