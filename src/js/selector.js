@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let cards = document.querySelectorAll('.js-card');
         cards.forEach((card) => {
             card.addEventListener('click', () => {
-                card.classList.add('tarot-ten-card__selector-list-hidden');
+                card.classList.add('transform-side');
                 cookieCardArray.push(card.dataset.type);
                 Cookies.set('tenTarotCards', cookieCardArray.join('&'), {expires: 2});
                 ++state;
@@ -173,12 +173,5 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let i = 0; i < cookieCardArray.length; i++) {
             currentCardDB.splice(currentCardDB.indexOf(cookieCardArray[i]), 1);
         }
-    }
-
-    function sendGtag(action, category, label) {
-        gtag && gtag('event', action, {
-            'event_category': category,
-            'event_label': label
-        });
     }
 });

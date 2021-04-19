@@ -197,11 +197,4 @@ document.addEventListener('DOMContentLoaded', function () {
         let rand = min + Math.random() * (max + 1 - min);
         return Math.floor(rand);
     }
-
-    function sendGtag(action, category, label) {
-        gtag && gtag('event', action, {
-            'event_category': category,
-            'event_label': label
-        });
-    }
 });

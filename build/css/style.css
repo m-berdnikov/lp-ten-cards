@@ -173,6 +173,8 @@ table {
 
 .transform {
   transform: rotateY(180deg); }
+  .transform-side {
+    transform: rotateY(90deg); }
 
 .form {
   margin: 20px auto;
