@@ -82,9 +82,5 @@ document.addEventListener('DOMContentLoaded', function () {
         firstCookieArray = cookieCardArray.slice(0, 3);
         secondCookieArray = cookieCardArray.slice(3, 6);
         thirdCookieArray = cookieCardArray.slice(6, 10);
-        console.log(cookieCardArray);
-        console.log(firstCookieArray);
-        console.log(secondCookieArray);
-        console.log(thirdCookieArray);
     }
 });
