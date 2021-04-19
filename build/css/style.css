@@ -427,19 +427,7 @@ body {
     .tarot-ten-card__subscription-text {
       margin: 10px auto; }
     .tarot-ten-card__subscription-button {
-      margin: 15px auto;
-      display: block;
-      width: 100%;
-      max-width: 421px;
-      height: 60px;
-      border-radius: 40px;
-      border: 0;
-      background-color: #efba48;
-      line-height: 60px;
-      font-weight: 400;
-      color: #282828;
-      text-decoration: none;
-      cursor: pointer; }
+      margin: 15px auto; }
   .tarot-ten-card__prediction {
     padding-top: 157px; }
     .tarot-ten-card__prediction-undertitle {

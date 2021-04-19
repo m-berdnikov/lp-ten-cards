@@ -90,6 +90,7 @@ function includeHTML() {
 function startWatch() {
     watch(`${ASSETS_PATH_SRC}/js/**/*.js`, compressJS);
     watch(`${ASSETS_PATH_SRC}/scss/**/*.scss`, sassFun);
+    watch([`${ASSETS_PATH_BUILD}/css/**/*.css`, `!${ASSETS_PATH_BUILD}/css/**/*.min.css`], compressCSS);
     watch(`${ASSETS_PATH_SRC}/img/**/*`, compressImg);
     watch(`${PAGE_PATH}/**/*`, includeHTML).on('change', browserSync.reload);
 }

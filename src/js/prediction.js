@@ -87,5 +87,4 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(secondCookieArray);
         console.log(thirdCookieArray);
     }
-
 });
